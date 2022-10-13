@@ -14,7 +14,7 @@ export class DataService {
   getData(){
     this.fieldUrl = `${this.countriesURL}`
     console.log(this.fieldUrl)
-    return this.http.get(this.fieldUrl)
+    return this.http.get(this.fieldUrl);
   }
 
 }

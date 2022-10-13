@@ -13,8 +13,11 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.dropdown = document.getElementById('dropDownContent');
-    this.data = this.service.getData();
-    console.log(this.data)
+    this.data = this.service.getData().subscribe(responseData => {
+      this.data = responseData;
+      console.log(responseData)
+    })
+    
   }
 
 
