@@ -1,15 +1,25 @@
-<app-header></app-header>
+
 <section class="countryFilters">
     <input class="countrySearch" type="text" placeholder="Search for a country…">
-
-        <!-- <p>Filter by Reigon</p> -->
     <select class="dropDownContent" id="dropDownContent" >
-        <option selected disabled>Filter by Reigon</option>
+        <option selected>Filter by Region</option>
         <option value="Africa" >Africa</option>
         <option value="Americas">Americas</option>
         <option value="Asia">Asia</option>
         <option value="Europe">Europe</option>
         <option value="Oceania">Oceania</option>
     </select>
-    
 </section>
+    <section class="grid-container">
+        <div *ngFor="let country of Countries" class="grid-item" [routerLink]="['/detail',country.name.common]">
+            <img class="countryFlag" src={{country.flags.png}} alt="image of country flag">
+            <div class="textContainer">
+                <h4 class="countryStats countryName">{{country.name.common}} </h4>
+                <h5 class="countryStats">Population: <p>{{country.population}}</p></h5>
+                <h5 class="countryStats">Region: <p>{{country.region}}</p></h5>
+                <h5 class="countryStats">Capital: <p>{{country.capital[0]}}</p></h5>
+            </div>
+        </div>
+        
+    </section>
+

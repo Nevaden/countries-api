@@ -4,8 +4,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    color: #C4C4C4;
-    margin-left: 16px;
+    padding-left: 16px;
 }
 
 .countrySearch{
@@ -17,7 +16,6 @@
 
 .countrySearch{
    
-    background: #FFFFFF;
     box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
     border-radius: 5px;
     width: 343px;
@@ -36,6 +34,63 @@
     border-radius: 5px;
     border:none;
     margin-top: 40px;
+    padding-left: 24px;
 }
 
+.grid-container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1fr);;
+}
+.grid-item{
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+    border-radius: 5px;
+    width: 264px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    cursor: pointer;
+}
 
+.countryFlag{
+    width: 264px;
+    height: 160px;
+}
+.textContainer{
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    padding-left: 24px;
+    padding-bottom: 46px;
+}
+h4.countryName{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 16px;
+}
+.countryStats {
+    display: flex;
+}
+
+.countryStats{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;   
+    margin-bottom: 8px;
+    
+}
+.countryStats p{
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px; 
+    margin-left: 5px;   
+}

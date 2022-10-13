@@ -7,14 +7,16 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  Countries: any;
   dropdown: any;
   data: any;
   constructor(private service: DataService) { }
 
   ngOnInit(): void {
     this.dropdown = document.getElementById('dropDownContent');
-    this.data = this.service.getData().subscribe(responseData => {
-      this.data = responseData;
+
+    this.data = this.service.getDataArgs(['region','population','flags','capital','name']).subscribe(responseData => {
+      this.Countries = responseData;
       console.log(responseData)
     })
     

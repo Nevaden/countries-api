@@ -6,34 +6,91 @@
 
 body{
  --text-Color: #111517;
- --background-Color: #FFF;
-
+ --background-ColorItems: #FFF;
+ --background-Color: #F2F2F2;
 }
 
 body.DarkTheme{
     --text-Color: #FFF;
-    --background-Color: #202C36;;
+    --background-ColorItems: #2B3844;
+    --background-Color: #202C36;
 }
 
 body{
     color: var(--text-Color);
-    background-color: var(--background-Color);
+    background-color: var(--background-ColorItems);
 }
 body select{
-    background-color: var(--background-Color);
+    background-color: var(--background-ColorItems);
 }
 
 body.DarkTheme{
     color: var(--text-Color);
-    background-color: var(--background-Color);
+    background-color: var(--background-ColorItems);
 }
 
 body.DarkTheme select{
     color: var(--text-Color);
-    background-color: var(--background-Color);
+    background-color: var(--background-ColorItems);
 }
 
-body.DarkTheme img{
+body.DarkTheme .moonThemeIcon{
     filter:invert(1)
 }
 
+body .countryFilters{
+    background-color: var(--background-Color);
+}
+body.DarkTheme .countryFilters{
+    background-color: var(--background-Color);
+}
+
+body .dropDownContent, body .countrySearch{
+    background-color: var(--background-ColorItems);
+}
+
+body.DarkTheme .dropDownContent {
+    background-color: var(--background-ColorItems);
+}
+
+body .countrySearch{
+    color: var(--text-Color) !important;
+    background-color: var(--background-ColorItems) !important;
+}
+body .countrySearch::placeholder{
+    color: var(--text-Color) !important;
+}
+
+body.DarkTheme .countrySearch {
+    color: var(--text-Color) !important;
+    background-color: var(--background-ColorItems) !important;
+}
+
+body.DarkTheme .countrySearch::placeholder{
+    color: var(--text-Color) !important;
+}
+
+
+body .grid-container{
+    background-color: var(--background-Color);
+}
+
+body.DarkTheme .grid-container {
+    background-color: var(--background-Color);
+}
+
+body .textContainer{
+    background-color: var(--background-ColorItems);
+}
+
+body.DarkTheme .textContainer{
+    background-color: var(--background-ColorItems);
+}
+
+body .countryStats {
+    color: var(--text-Color);
+}
+
+body.DarkTheme .countryStats{
+    color: var(--text-Color);
+}
