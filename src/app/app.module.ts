@@ -7,12 +7,14 @@ import { IndexComponent } from './components/index/index.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
     DetailComponent,
-    HeaderComponent
+    HeaderComponent,
+
   ],
   imports: [
     BrowserModule,

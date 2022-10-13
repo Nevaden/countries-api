@@ -4,9 +4,10 @@ import { DetailComponent } from './components/detail/detail.component';
 import { IndexComponent } from './components/index/index.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: "/home", pathMatch: "full"},
-  {path: 'home', component: IndexComponent},
-  {path: 'about', component: DetailComponent},
+  {path: '', redirectTo: "/index", pathMatch: "full"},
+  {path: 'index', component: IndexComponent, children:[
+    {path: ':id', component: DetailComponent}
+  ]},
   {path: '*', component: IndexComponent}
 ];
 

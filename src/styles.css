@@ -3,3 +3,24 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+body{
+ --text-Color: #111517;
+ --background-Color: #FFF;
+
+}
+
+body.DarkTheme{
+    --text-Color: #FFF;
+    --background-Color: #202C36;;
+}
+
+body{
+    color: var(--text-Color);
+    background-color: var(--background-Color);
+}
+
+body.DarkTheme{
+    color: var(--text-Color);
+    background-color: var(--background-Color);
+}

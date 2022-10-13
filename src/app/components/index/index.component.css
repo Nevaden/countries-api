@@ -1,33 +1,41 @@
 
 
-section{
+.countryFilters{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     color: #C4C4C4;
+    margin-left: 16px;
+}
+.countrySearch{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    
 }
 
-input{
-        
+.countrySearch{
+   
     background: #FFFFFF;
     box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
     border-radius: 5px;
     width: 343px;
     overflow: hidden;
     height: 48px;
+    padding-left: 72px;
     border: none;
-    position: relative;
     background: url(../../../assets/search.svg) no-repeat left 32px center ;
-    padding-left:48px;
-}
-input::placeholder{
-    padding-left: 26px;
 }
 
 
-
-
-
-
-.countrySearch{
-    margin-top: 24px;
+.dropDownContent{
+    width: 200px;
+    height: 48px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+    border:none;
+    margin-top: 40px;
 }
+
+
