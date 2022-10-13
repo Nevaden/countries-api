@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -7,10 +8,48 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-
-  constructor(private data: DataService) { }
+  borders:any=[];
+  data: any;
+  country: any;
+  currencies: any;
+  currenciesArray: any = [];
+  name:any;
+  nativeName: any;
+  population: any;
+  constructor(private service: DataService,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.name = {
+      name: this.route.snapshot.params['id'],   
+    }
+    this.route.params.subscribe(
+      (params: Params) => {
+        this.name.name = params['name']  
+      }
+    )
+
+    this.service.getCountryData(this.name.name).subscribe(responseData => {
+      this.country = responseData;
+      this.nativeName = this.country[0].name.nativeName[Object.keys(this.country[0].name.nativeName)[Object.keys(this.country[0].name.nativeName).length - 1]].common
+      // [ this.currencies[0], this.currencies[1], this.currencies[2] ] = this.country[0].currencies
+      this.currencies = this.country[0].currencies
+      this.currencies = Object.keys(this.currencies).forEach(item => {
+        this.currenciesArray.push(this.currencies[item].name)
+      })
+      this.country[0].population = this.country[0].population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      this.borders = this.country[0].borders
+      this.service.getCountryByCode(this.borders).subscribe((responseData: any) => {
+        this.data = responseData;
+        this.borders = []
+        this.data.forEach((element: any) => {
+          this.borders.push(element.name.common)
+        });
+        this.country[0].borders = this.borders
+      })
+     })
+
+ 
 
   }
 

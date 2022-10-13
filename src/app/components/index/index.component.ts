@@ -10,6 +10,8 @@ export class IndexComponent implements OnInit {
   Countries: any;
   dropdown: any;
   data: any;
+  filterContent: string = '';
+  region: string = '';
   constructor(private service: DataService) { }
 
   ngOnInit(): void {
