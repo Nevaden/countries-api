@@ -5,9 +5,9 @@
 }
 
 body{
- --text-Color: #111517;
- --background-ColorItems: #FFF;
- --background-Color: #F2F2F2;
+    --text-Color: #111517;
+    --background-ColorItems: #FFF;
+    --background-Color: #F2F2F2;
 }
 
 body.DarkTheme{
@@ -93,4 +93,10 @@ body .countryStats {
 
 body.DarkTheme .countryStats{
     color: var(--text-Color);
+}
+
+
+
+body.DarkTheme .backArrow{
+    filter: invert(1);
 }

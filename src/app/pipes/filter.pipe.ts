@@ -13,12 +13,13 @@ export class FilterPipe implements PipeTransform {
     let returnArray: { title: boolean; }[] = [];
 
     for (const item of value) {
-      let filterItem = item[filterField].official.toLowerCase()
+      let filterItem = item[filterField].common.toLowerCase()
       let filterStringCase = filterString.toLowerCase()
       if( filterItem.includes(filterStringCase) ){
         returnArray.push(item);
       }
   }
+  console.log(returnArray,"return array")
     return returnArray;
   }
 

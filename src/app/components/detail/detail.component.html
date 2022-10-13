@@ -27,7 +27,7 @@
         <div class="BordersContainer">
             <h4>Border Countries</h4>
             <div class="borders">
-                <div class="borderCountries" *ngFor="let item of country[0].borders">{{item}}</div>
+                <div class="borderCountries" *ngFor="let item of country[0].borders" [routerLink]="['/detail',item]">{{item}}</div>
 
             </div>
         </div>

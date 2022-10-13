@@ -7,7 +7,7 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  Countries: any;
+  Countries: any;  
   dropdown: any;
   data: any;
   filterContent: string = '';
@@ -16,14 +16,13 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.dropdown = document.getElementById('dropDownContent');
-
     this.data = this.service.getDataArgs(['region','population','flags','capital','name']).subscribe(responseData => {
       this.Countries = responseData;
-      console.log(responseData)
+      this.Countries.forEach((element: { population: { toString: () => string; }; }) => {
+        element.population = element.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      });
     })
-    
   }
-
 
   toggleDropDown(){
     this.dropdown?.classList.toggle("visible")

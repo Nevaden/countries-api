@@ -18,6 +18,7 @@ export class DataService {
     console.log(this.fieldUrl)
     return this.http.get(this.fieldUrl);
   }
+  
   getDataArgs(args: any){
     this.fieldUrl = 'https://restcountries.com/v3.1/all?fields='
 
