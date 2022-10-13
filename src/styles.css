@@ -19,8 +19,20 @@ body{
     color: var(--text-Color);
     background-color: var(--background-Color);
 }
+body select{
+    background-color: var(--background-Color);
+}
 
 body.DarkTheme{
     color: var(--text-Color);
     background-color: var(--background-Color);
+}
+
+body.DarkTheme select{
+    color: var(--text-Color);
+    background-color: var(--background-Color);
+}
+
+body.DarkTheme img{
+    filter:invert(1)
 }

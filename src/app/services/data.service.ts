@@ -13,6 +13,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
   getData(){
     this.fieldUrl = `${this.countriesURL}`
+    console.log(this.fieldUrl)
     return this.http.get(this.fieldUrl)
   }
 

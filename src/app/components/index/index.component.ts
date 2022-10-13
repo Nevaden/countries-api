@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-index',
@@ -7,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
   dropdown: any;
-  constructor() { }
+  data: any;
+  constructor(private service: DataService) { }
 
   ngOnInit(): void {
     this.dropdown = document.getElementById('dropDownContent');
+    this.data = this.service.getData();
+    console.log(this.data)
   }
 
 
