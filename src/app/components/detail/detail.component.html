@@ -36,26 +36,17 @@
           </h4>
         </div>
         <div class="countryDetailsSub">
-          <h4 class="countryDetails">
-            Top Level Domain:
-            <p>{{ country[0].tld }}</p>
+          <h4 class="countryDetails">Top Level Domain:
+            <p *ngFor="let item of country[0].tld; last as isLast">{{ item }}<span *ngIf="!isLast">,</span></p>
           </h4>
           <h4 class="countryDetails">
             Currencies:
-            <p *ngFor="let item of currenciesArray; let i = index">
-              {{ item }}
-            </p>
+            <p *ngFor="let item of currenciesArray; last as isLast">
+              {{ item }}<span *ngIf="!isLast">,</span></p>
           </h4>
           <h4 class="countryDetails">
             Languages:
-            <p
-              *ngFor="
-                let item of country[0].languages | keyvalue;
-                let i = index
-              "
-            >
-              {{ item.value }}
-            </p>
+            <p *ngFor="let item of country[0].languages | keyvalue;last as isLast">{{ item.value }}<span *ngIf="!isLast">,</span></p>
           </h4>
         </div>
       </div>

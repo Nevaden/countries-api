@@ -16,6 +16,7 @@ export class DetailComponent implements OnInit {
   name:any;
   nativeName: any;
   population: any;
+  languages: any;
   constructor(private service: DataService,
     private route: ActivatedRoute) { }
 
@@ -30,16 +31,18 @@ export class DetailComponent implements OnInit {
           this.country = responseData;
           console.log(this.country,"country data")
           this.nativeName = this.country[0].name.nativeName[Object.keys(this.country[0].name.nativeName)[Object.keys(this.country[0].name.nativeName).length - 1]].common
+                
           this.currencies = this.country[0].currencies
           this.currenciesArray = [];
           this.currencies = Object.keys(this.currencies).forEach(item => {
             this.currenciesArray.push(this.currencies[item].name)
           })
+
+          this.languages = 
           this.country[0].population = this.country[0].population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
           this.borders = this.country[0].borders
           this.service.getCountryByCode(this.borders).subscribe((responseData: any) => {
             this.data = responseData;
-            console.log(this.data, "borders")
             this.borders = []
             this.data.forEach((element: any) => {
               this.borders.push(element.name.common)
