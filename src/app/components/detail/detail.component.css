@@ -101,7 +101,51 @@
 
 @media only screen and (min-width: 1200px){
 
-    
+    .backButton{
+        margin-left: 80px;
+    }
+    .countryData{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100vw;
+        
+    }
 
+    .countryFlag{
+        max-width: 560px;
+        max-height: 401px;
+        height: 401px;
+        width: auto;
+    }
+
+    .countryName{
+        font-size: 32px;
+    }
+    
+    .countryTextContainer{
+        margin-top: 39px;
+    }
+
+    .countryDetailsContainer{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .BordersContainer{
+        margin-top: 68px;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    .BordersContainer h4{
+        font-size: 16px;
+        margin-right: 16px;
+    }
+    .borders{
+
+    }
 
 }

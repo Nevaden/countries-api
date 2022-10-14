@@ -115,6 +115,10 @@ h4.countryName{
         padding-left: 80px;
         padding-right: 80px;
     }
+    .grid-item{
+        height: 336px;
+        width: 264px;
+    }
 
     .countrySearch{
         margin-top: 48px;
@@ -123,6 +127,7 @@ h4.countryName{
     .dropDownContent{
         margin-top: 48px;
     }
+
 
 }
 
