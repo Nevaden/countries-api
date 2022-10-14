@@ -16,27 +16,39 @@ body.DarkTheme{
     --background-Color: #202C36;
 }
 
-body{
-    color: var(--text-Color);
-    background-color: var(--background-ColorItems);
-}
-body select{
+body .headerContainer{
     background-color: var(--background-ColorItems);
 }
 
-body.DarkTheme{
-    color: var(--text-Color);
+body.DarkTheme .headerContainer{
     background-color: var(--background-ColorItems);
 }
+
+body{
+    color: var(--text-Color);
+    background-color: var(--background-Color);
+}
+body.DarkTheme{
+    color: var(--text-Color);
+    background-color: var(--background-Color);
+}
+
+body select{
+    background-color: var(--background-Color);
+}
+
+
+
 
 body.DarkTheme select{
     color: var(--text-Color);
-    background-color: var(--background-ColorItems);
+    background-color: var(--background-Color);
 }
 
 body.DarkTheme .moonThemeIcon{
     filter:invert(1)
 }
+
 
 body .countryFilters{
     background-color: var(--background-Color);
@@ -96,7 +108,20 @@ body.DarkTheme .countryStats{
 }
 
 
+body.DarkTheme .backbutton{
+    background-color: var(--background-ColorItems);
+}
 
 body.DarkTheme .backArrow{
     filter: invert(1);
 }
+
+
+body .countryContainer{
+    background-color: var(--background);
+}
+
+body.DarkTheme .countryContainer{
+    background-color: var(--background);
+}
+
