@@ -19,7 +19,6 @@ export class FilterPipe implements PipeTransform {
         returnArray.push(item);
       }
   }
-  console.log(returnArray,"return array")
     return returnArray;
   }
 

@@ -109,6 +109,21 @@ h4.countryName{
         grid-template-columns: 1fr 1fr 1fr ;
     }     
 
+    .countryFilters{
+        flex-direction: row;
+        justify-content: space-between;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .countrySearch{
+        margin-top: 48px;
+    }
+
+    .dropDownContent{
+        margin-top: 48px;
+    }
+
 }
 
 

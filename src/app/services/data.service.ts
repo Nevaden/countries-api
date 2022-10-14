@@ -32,7 +32,8 @@ export class DataService {
 
   getCountryData(country: string){
     this.fieldUrl = 'https://restcountries.com/v3.1/name/'
-    this.fieldUrl += country
+    this.fieldUrl += country +'?fullText=true'
+    console.log(this.fieldUrl)
     return this.http.get(this.fieldUrl);    
   }
 
