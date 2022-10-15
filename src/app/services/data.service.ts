@@ -15,7 +15,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
   getAllData(){
     this.fieldUrl = `${this.countriesURL}all`
-    console.log(this.fieldUrl)
+    // console.log(this.fieldUrl)
     return this.http.get(this.fieldUrl);
   }
   
@@ -25,7 +25,7 @@ export class DataService {
     args.forEach((element: any) => {
       this.fieldUrl += element + ','
     });
-    console.log(this.fieldUrl,"all data ARGs")
+    // console.log(this.fieldUrl,"all data ARGs")
     return this.http.get(this.fieldUrl);
   }
 
@@ -33,7 +33,7 @@ export class DataService {
   getCountryData(country: string){
     this.fieldUrl = 'https://restcountries.com/v3.1/name/'
     this.fieldUrl += country +'?fullText=true'
-    console.log(this.fieldUrl)
+    // console.log(this.fieldUrl)
     return this.http.get(this.fieldUrl);    
   }
 
@@ -42,7 +42,7 @@ export class DataService {
     code.forEach((element: any) => {
       this.fieldUrl += element + ','
     });
-    console.log(this.fieldUrl,"getCountryByCode")
+    // console.log(this.fieldUrl,"getCountryByCode")
     return this.http.get(this.fieldUrl);
   }
 }

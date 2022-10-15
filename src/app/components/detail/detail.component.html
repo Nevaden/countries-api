@@ -1,68 +1,85 @@
-<div class="backButton" routerLink="/index">
-  <img class="backArrow" src="../../../assets/BackArrow.svg" alt="back arrow" />
-  <p class="backArrowText">Back</p>
-</div>
-
-<section class="countryContainer">
-  <article class="countryData">
+<section class="countryDetail">
+  <div class="backButton" routerLink="/index">
     <img
-      class="countryFlag"
-      src="{{ country[0].flags.png }}"
-      alt="image of Country Flag"
+      class="backArrow"
+      src="../../../assets/BackArrow.svg"
+      alt="back arrow"
     />
-    <article class="countryTextContainer">
-      <h3 class="countryName">{{ country[0].name.common }}</h3>
-      <div class="countryDetailsContainer">
-        <div class="countryDetailsMain">
-          <h4 class="countryDetails">
-            Native Name:
-            <p>{{ nativeName }}</p>
-          </h4>
-          <h4 class="countryDetails">
-            Population:
-            <p>{{ country[0].population }}</p>
-          </h4>
-          <h4 class="countryDetails">
-            Region:
-            <p>{{ country[0].region }}</p>
-          </h4>
-          <h4 class="countryDetails">
-            Sub Region:
-            <p>{{ country[0].subregion }}</p>
-          </h4>
-          <h4 class="countryDetails">
-            Capital:
-            <p>{{ country[0].capital[0] }}</p>
-          </h4>
-        </div>
-        <div class="countryDetailsSub">
-          <h4 class="countryDetails">Top Level Domain:
-            <p *ngFor="let item of country[0].tld; last as isLast">{{ item }}<span *ngIf="!isLast">,</span></p>
-          </h4>
-          <h4 class="countryDetails">
-            Currencies:
-            <p *ngFor="let item of currenciesArray; last as isLast">
-              {{ item }}<span *ngIf="!isLast">,</span></p>
-          </h4>
-          <h4 class="countryDetails">
-            Languages:
-            <p *ngFor="let item of country[0].languages | keyvalue;last as isLast">{{ item.value }}<span *ngIf="!isLast">,</span></p>
-          </h4>
-        </div>
-      </div>
+    <p class="backArrowText">Back</p>
+  </div>
 
-      <div *ngIf="country[0].borders" class="BordersContainer">
-        <h4>Border Countries</h4>
-        <div class="borders">
-          <div
-            class="borderCountries"
-            *ngFor="let item of country[0].borders"
-            [routerLink]="['/detail', item]"
-          >
-            {{ item }}
+  <section class="countryContainer">
+    <article class="countryData">
+      <img
+        class="countryFlag"
+        src="{{ country[0].flags.png }}"
+        alt="image of Country Flag"
+      />
+      <article class="countryTextContainer">
+        <h3 class="countryName">{{ country[0].name.common }}</h3>
+        <div class="countryDetailsContainer">
+          <div class="countryDetailsMain">
+            <h4 class="countryDetails">
+              Native Name:
+              <p>{{ nativeName }}</p>
+            </h4>
+            <h4 class="countryDetails">
+              Population:
+              <p>{{ country[0].population }}</p>
+            </h4>
+            <h4 class="countryDetails">
+              Region:
+              <p>{{ country[0].region }}</p>
+            </h4>
+            <h4 class="countryDetails">
+              Sub Region:
+              <p>{{ country[0].subregion }}</p>
+            </h4>
+            <h4 class="countryDetails">
+              Capital:
+              <p>{{ country[0].capital[0] }}</p>
+            </h4>
+          </div>
+          <div class="countryDetailsSub">
+            <h4 class="countryDetails">
+              Top Level Domain:
+              <p *ngFor="let item of country[0].tld; last as isLast">
+                {{ item }}<span *ngIf="!isLast">,</span>
+              </p>
+            </h4>
+            <h4 class="countryDetails">
+              Currencies:
+              <p *ngFor="let item of currenciesArray; last as isLast">
+                {{ item }}<span *ngIf="!isLast">,</span>
+              </p>
+            </h4>
+            <h4 class="countryDetails">
+              Languages:
+              <p
+                *ngFor="
+                  let item of country[0].languages | keyvalue;
+                  last as isLast
+                "
+              >
+                {{ item.value }}<span *ngIf="!isLast">,</span>
+              </p>
+            </h4>
           </div>
         </div>
-      </div>
+
+        <div *ngIf="country[0].borders" class="BordersContainer">
+          <h4>Border Countries</h4>
+          <div class="borders">
+            <div
+              class="borderCountries"
+              *ngFor="let item of country[0].borders"
+              [routerLink]="['/detail', item]"
+            >
+              {{ item }}
+            </div>
+          </div>
+        </div>
+      </article>
     </article>
-  </article>
+  </section>
 </section>
