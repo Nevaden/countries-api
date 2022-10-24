@@ -9,7 +9,9 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './pipes/filter.pipe';
-import { RegionPipe } from './pipes/region.pipe'
+import { RegionPipe } from './pipes/region.pipe';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects'
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { RegionPipe } from './pipes/region.pipe'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([])
   ],
   providers: [DataService,FilterPipe],
   bootstrap: [AppComponent]
