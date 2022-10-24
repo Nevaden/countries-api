@@ -31,6 +31,7 @@ export class DetailComponent implements OnInit {
         this.name.name = params['name']  
         this.service.getCountryData(this.name.name).subscribe(responseData => {
           this.country = responseData;
+          console.log()
           this.nativeName = this.country[0].name.nativeName[Object.keys(this.country[0].name.nativeName)[Object.keys(this.country[0].name.nativeName).length - 1]].common
                 
           this.currencies = this.country[0].currencies

@@ -2,8 +2,9 @@
 <section class="countryFilters">
     <input class="countrySearch" type="text" placeholder="Search for a country…" [(ngModel)]="filterContent">
     <select class="dropDownContent" id="dropDownContent" [(ngModel)]="region" >
-        <option selected value=""  >Filter by Region</option> <!--hidden disabled value=""-->
-        <option value="Africa" >Africa</option>
+        <option selected hidden value="">Filter by Region</option> <!--hidden disabled value=""-->
+        <option value="">All</option>
+        <option value="Africa">Africa</option>
         <option value="Americas">Americas</option>
         <option value="Asia">Asia</option>
         <option value="Europe">Europe</option>
